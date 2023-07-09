@@ -132,19 +132,22 @@ function pickMystery() {
 }
 
 pickMystery()
-let boxMystery=pickMystery();
+
+let boxMystery=pickMystery()
 
 
 
-function revealMystery(param) {
-
-    let mssg=("¡"+param.suspect.firstName+" "+param.suspect.lastName+" "+"killed Mr. Boddy using the"+" "+param.weapon.name+" "+"in the"+" "+param.room.name+" "+"!");
-    //let mssg=(`¡${param.suspect.firstName} ${param.suspect.lastName} killed Mr. Boddy using the ${param.weapon.name} in the ${param.room.name}!`)
-    return console.log(mssg);
-     
-    //let msg=("¡"+param.suspect.firstName+" "+param.suspect.lastName+" "+"killed Mr. Boddy using the"+" "+param.weapon.name+" "+"in the"+" "+param.room.name+" "+"!")
-    //return console.log("¡"+param.suspect.firstName+" "+param.suspect.lastName+" "+"killed Mr. Boddy using the"+" "+param.weapon.name+" "+"in the"+" "+param.room.name+" "+"!");
-
+function revealMystery() {
+ firstN=boxMystery.suspect.firstName 
+ lastN=boxMystery.suspect.lastName
+ wp=boxMystery.weapon.name
+ r=boxMystery.room.name
+    const message=`${firstN} ${lastN} killed Mr. Boddy using the ${wp} in the ${r}!`
+    //  const message=`${suspect.firstName} ${suspect.lastName} killed Mr. Boddy using the ${weapon.name} in the ${room.name}!`;
+    return message
 }
-revealMystery(boxMystery)
+console.log(revealMystery());
+
+
+
 
