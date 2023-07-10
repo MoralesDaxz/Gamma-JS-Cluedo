@@ -135,19 +135,27 @@ pickMystery()
 
 let boxMystery=pickMystery()
 
-
-
 function revealMystery() {
- firstN=boxMystery.suspect.firstName 
- lastN=boxMystery.suspect.lastName
- wp=boxMystery.weapon.name
- r=boxMystery.room.name
-    const message=`${firstN} ${lastN} killed Mr. Boddy using the ${wp} in the ${r}!`
-    //  const message=`${suspect.firstName} ${suspect.lastName} killed Mr. Boddy using the ${weapon.name} in the ${room.name}!`;
-    return message
+    firstN=boxMystery.suspect.firstName
+    lastN=boxMystery.suspect.lastName
+    wp=boxMystery.weapon.name
+    r=boxMystery.room.name
+    let message=(`${firstN} ${lastN} killed Mr. Boddy using the ${wp} in the ${r}!`)
+    return console.log(message)
+   
 }
-console.log(revealMystery());
+revealMystery()
 
-
-
-
+/* para que apruebe en el clue Lab habilitar este
+    function revealMystery(param) {
+    firstN=param.suspect.firstName
+    lastN=param.suspect.lastName
+    wp=param.weapon.name
+    r=param.room.name
+    return `${firstN} ${lastN} killed Mr. Boddy using the ${wp} in the ${r}!`
+    // const message="firstN ${lastN} killed Mr. Boddy using the ${wp} in the ${r}!"
+    //  const message=`${suspect.firstName} ${suspect.lastName} killed Mr. Boddy using the ${weapon.name} in the ${room.name}!`;
+    // return message
+}
+revealMystery(pickMystery());
+ */
